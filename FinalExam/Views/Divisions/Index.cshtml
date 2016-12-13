@@ -1,0 +1,25 @@
+﻿@model IEnumerable<FinalExam.Division>
+
+@{
+    ViewBag.Title = "NHL Divisions";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>NHL Divisions</h2>
+
+<table class="table">
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            
+            @Html.ActionLink(item.Name, "Details", new { name = item.Name })
+            
+        </td>
+        <td>
+            
+        </td>
+    </tr>
+}
+
+</table>
